@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 7612176087690542950}
   - component: {fileID: 7637562296324928013}
   - component: {fileID: 7708105138730023502}
-  - component: {fileID: 2078492159853350237}
   m_Layer: 5
   m_Name: LevelImage
   m_TagString: Untagged
@@ -140,19 +139,6 @@ MonoBehaviour:
   _text: {fileID: 7612176089158151650}
   _button: {fileID: 3723491179542580915}
   _spriteLock: {fileID: 7612176087684702306}
-  _save: {fileID: 2078492159853350237}
---- !u!114 &2078492159853350237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7612176087690542951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd15226e366b3840aeb706bd9337d4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7612176089144742660
 GameObject:
   m_ObjectHideFlags: 0

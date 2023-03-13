@@ -11,7 +11,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private int _speed;
     [SerializeField] private ParticleSystem _hittingWall;
-    [SerializeField] private Rigidbody _rigidbody;
+
+    private Rigidbody _rigidbody;
 
     private void Start()
     {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
@@ -24,5 +25,6 @@ public class NewGame : MonoBehaviour
     private void Restart()
     {
         PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
     }
 }

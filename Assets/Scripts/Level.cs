@@ -1,24 +1,28 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Save))]
 public class Level : MonoBehaviour
 {
-    [SerializeField] private Bullet _bullet;
     [SerializeField] private GameObject _win;
     [SerializeField] private GameObject _noAmmo;
-    [SerializeField] private int _numberCoinsItemAndEnemy;
+    [SerializeField] private int _numberCoinsEnemy;
+    [SerializeField] private int _numberCoinsItem;
+    [SerializeField] private int _rewardIsLess;
 
-    private Save _save;
+    private int _maxBullets = 1;
     private Player _player;
     private int _coins;
     private int _numberBrokenBullets = 0;
-    private int _maxBullets;
-    private int _allItemAndEnemy = 0;
-    private bool _isFirstPassLevel;
+    private int _allEnemy = 0;
+    private int _allItem = 0;
+    private bool _isLevelPassed;
 
     public int Coins => _coins;
     public int MaxBullets => _maxBullets;
+
+    public int AllEnemy => _allEnemy;
+    public int AllItem => _allItem;
 
     public event UnityAction BulletCrashed;
     public event UnityAction CoinAdded;
@@ -26,29 +30,40 @@ public class Level : MonoBehaviour
     private void Awake()
     {
         foreach (Enemy enemy in GetComponentsInChildren<Enemy>())
-            _allItemAndEnemy++;
+        {
+            _allEnemy++;
+            _maxBullets += enemy.Health;
+        }
 
         foreach (Item item in GetComponentsInChildren<Item>())
-            _allItemAndEnemy++;
+        {
+            _allItem++;
+            _maxBullets += item.Health;
+        }
+
+        _player = GetComponentInChildren<Player>();
+        _player.SetBullets(_maxBullets);
     }
 
     private void Start()
     {
-        _maxBullets = _allItemAndEnemy;
-        _save = GetComponent<Save>();
-        _player = GetComponentInChildren<Player>();
-        _player.GetBullets(_maxBullets);
-        _isFirstPassLevel = _save.IsFirstPassLevel();
+        _isLevelPassed = Save.IsLevelPassed();
         _coins = 0;
     }
 
     private void OnEnable()
     {
         foreach (Enemy enemy in GetComponentsInChildren<Enemy>())
-            enemy.EnemyDied += SubtractItemAndEnemy;
+        {
+            enemy.EnemyDied += SubtractEnemy;
+            enemy.BulletHit += BulletBroke;
+        }
 
         foreach (Item item in GetComponentsInChildren<Item>())
-            item.ItemDied += SubtractItemAndEnemy;
+        {
+            item.ItemDied += SubtractItem;
+            item.BulletHit += BulletBroke;
+        }
 
         foreach (Wall wall in GetComponentsInChildren<Wall>())
             wall.BulletCrashed += BulletBroke;
@@ -57,28 +72,50 @@ public class Level : MonoBehaviour
     private void OnDisable()
     {
         foreach (Enemy enemy in GetComponentsInChildren<Enemy>())
-            enemy.EnemyDied -= SubtractItemAndEnemy;
+        {
+            enemy.EnemyDied -= SubtractEnemy;
+            enemy.BulletHit -= BulletBroke;
+        }
 
         foreach (Item item in GetComponentsInChildren<Item>())
-            item.ItemDied += SubtractItemAndEnemy;
+        {
+            item.ItemDied += SubtractItem;
+            item.BulletHit -= BulletBroke;
+        }
 
         foreach (Wall wall in GetComponentsInChildren<Wall>())
             wall.BulletCrashed -= BulletBroke;
     }
 
-    private void SubtractItemAndEnemy()
+    private void SubtractEnemy()
     {
-        _allItemAndEnemy--;
+        _allEnemy--;
+        StartCoroutine(Slowmo());
 
-        if (_isFirstPassLevel)
-            _coins += _numberCoinsItemAndEnemy;
+        if (_isLevelPassed)
+            _coins += (_numberCoinsEnemy / _rewardIsLess);
         else
-            _coins += (_numberCoinsItemAndEnemy/10);
+            _coins += _numberCoinsEnemy;
 
-        if (_allItemAndEnemy <= 0)
+        if (_allEnemy <= 0)
             EndGame();
         else
             BulletBroke();
+
+        CoinAdded?.Invoke();
+    }
+
+    private void SubtractItem()
+    {
+        _allItem--;
+        StartCoroutine(Slowmo());
+
+        if (_isLevelPassed)
+            _coins += (_numberCoinsItem / _rewardIsLess);
+        else
+            _coins += _numberCoinsItem;
+
+        BulletBroke();
         CoinAdded?.Invoke();
     }
 
@@ -93,10 +130,11 @@ public class Level : MonoBehaviour
 
     private void EndGame()
     {
-        if (_allItemAndEnemy <= 0)
+        if (_allEnemy <= 0)
         {
             _win.SetActive(true);
-            Save();
+            _player.Win();
+            SaveIs();
         }
         else
         {
@@ -104,13 +142,19 @@ public class Level : MonoBehaviour
         }
     }
 
-    private void Save()
+    IEnumerator Slowmo()
+    {
+        Time.timeScale = 0.3f;
+        yield return new WaitForSeconds(0.2f);
+        Time.timeScale = 0.6f;
+        yield return new WaitForSeconds(0.2f);
+        Time.timeScale = 1;
+    }
+
+    private void SaveIs()
     {
         int coins;
-        coins = _coins + _save.Coins();
-        Debug.Log(_coins);
-        Debug.Log(_save.Coins());
-        Debug.Log(coins);
-        _save.LevelStats(coins, true);
+        coins = _coins + Save.Coins();
+        Save.LevelStats(coins, true);
     }
 }

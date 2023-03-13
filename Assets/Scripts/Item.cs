@@ -11,6 +11,9 @@ public class Item : MonoBehaviour
     [SerializeField] private List<GameObject> _loots;
 
     public event UnityAction ItemDied;
+    public event UnityAction BulletHit;
+
+    public int Health => _health;
 
     private void Start()
     {
@@ -25,11 +28,14 @@ public class Item : MonoBehaviour
         {
             Death();
         }
+        else
+        {
+            BulletHit?.Invoke();
+        }
     }
 
     private void Death()
     {
-        ItemDied?.Invoke();
         Instantiate(_crash, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         Instantiate(_coins, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
 
@@ -39,5 +45,6 @@ public class Item : MonoBehaviour
         }
 
         Destroy(gameObject);
+        ItemDied?.Invoke();
     }
 }

@@ -8,7 +8,6 @@ public class LevelImage : MonoBehaviour
     [SerializeField] private TMP_Text _text;
     [SerializeField] private Button _button;
     [SerializeField] private GameObject _spriteLock;
-    [SerializeField] private Save _save;
 
     private int _indexLevel;
 
@@ -17,7 +16,7 @@ public class LevelImage : MonoBehaviour
         _indexLevel = indexLevel;
         _text.text = _indexLevel.ToString();
 
-        if (_save.IsFirstPassLevel(_indexLevel - 1) == false || _indexLevel == 1)
+        if (Save.IsLevelPassed(_indexLevel - 1) == true || _indexLevel == 1)
         {
             _spriteLock.SetActive(false);
             _button.interactable= true;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
@@ -9,6 +7,7 @@ public class RaycastReflection : MonoBehaviour
     [SerializeField] private int _reflections;
     [SerializeField] private float _maxLength;
     [SerializeField] private Player _player;
+    [SerializeField] private ParticleSystem _target;
 
     private Transform _shootPoint;
     private LineRenderer _lineRenderer;
@@ -24,7 +23,7 @@ public class RaycastReflection : MonoBehaviour
 
     private void Update()
     {
-        _shootPoint = _player.GetComponentInChildren<Weapon>().GetComponentInChildren<ShotPoint>().transform;
+        _shootPoint = _player.GetComponentInChildren<MovePlayer>().GetComponentInChildren<Weapon>().GetComponentInChildren<ShotPoint>().transform;
 
         _ray = new Ray(_shootPoint.position, _shootPoint.forward);
 
@@ -42,13 +41,28 @@ public class RaycastReflection : MonoBehaviour
                 _ray = new Ray(_hit.point, Vector3.Reflect(_ray.direction, _hit.normal));
 
                 if (_hit.collider.gameObject.GetComponent<Enemy>())
+                {
+                    _target.gameObject.SetActive(true);
+                    _target.transform.position = _hit.collider.gameObject.GetComponent<Enemy>().transform.position;
                     break;
+                }
+                else if (_hit.collider.gameObject.GetComponent<Item>())
+                {
+                    _target.gameObject.SetActive(true);
+                    _target.transform.position = _hit.collider.gameObject.GetComponent<Item>().transform.position;
+                    _target.transform.position = new Vector3(_target.transform.position.x,0.03f, _target.transform.position.z); 
+                    break;
+                }
             }
-
             else
             {
                 _lineRenderer.positionCount += 1;
                 _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, _ray.origin + _ray.direction * remainingLength);
+            }
+
+            if(i == _reflections-1)
+            {
+                _target.gameObject.SetActive(false);
             }
         }
     }
