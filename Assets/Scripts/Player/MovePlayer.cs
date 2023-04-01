@@ -7,11 +7,14 @@ public class MovePlayer : MonoBehaviour
 {
     [SerializeField] private Transform _pistolPoint;
     [SerializeField] private WeaponsList _weapons;
+    [SerializeField] private int _price;
+
     private FixedJoystick _joystick;
     private Rigidbody _rigidbody;
-
     private float _speedRun;
     private GameObject _weapon;
+
+    public int Price => _price;
 
     private void Awake()
     {

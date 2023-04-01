@@ -9,16 +9,29 @@ public class Save : MonoBehaviour
     private static string _language = "Language";
     private static string _character = "Character";
     private static string _weapon = "Weapons";
+    private static string _bullet = "Bullet";
+    private static string _stars = "Stars";
 
     private void Awake()
     {
-        SetSkinBuyed(0, true);
+        SetCharacterBuyed(0, true);
         SetWeaponBuyed(0, true);
+        SetBulletParticleBuyed(0, true);
     }
 
-    static public int Coins()
+    static public int GetCoins()
     {
         return PlayerPrefs.GetInt(_coins);
+    }
+
+    static public void SetCoins(int coins)
+    {
+        PlayerPrefs.SetInt(_coins, coins);
+    }
+
+    static public int GetStars(int stars)
+    {
+        return PlayerPrefs.GetInt(_stars+stars);
     }
 
     static public bool IsLevelPassed()
@@ -35,10 +48,15 @@ public class Save : MonoBehaviour
         return value;
     }
 
-    static public void LevelStats(int coins, bool levelCompleted)
+    static public void LevelStats(int coins, bool levelCompleted, int stars)
     {
-        PlayerPrefs.SetInt(_coins, coins);
+        SetCoins(coins);
         PlayerPrefs.SetInt(_IsFirstPassLevel + TakeIndexLevel(), levelCompleted ? 1 : 0);
+
+        if (GetStars(TakeIndexLevel()) < stars)
+        {
+            PlayerPrefs.SetInt(_stars + TakeIndexLevel(),stars);
+        }
     }
 
     static public int TakeIndexLevel()
@@ -65,12 +83,14 @@ public class Save : MonoBehaviour
     {
         return PlayerPrefs.GetInt(_character);
     }
-    static public void SetSkinBuyed(int index, bool isBuyed)
+
+
+    static public void SetCharacterBuyed(int index, bool isBuyed)
     {
         PlayerPrefs.SetInt(_character + index, isBuyed ? 1 : 0);
     }
 
-    static public bool GetSkinBuyed(int index)
+    static public bool GetCharacterBuyed(int index)
     {
         bool value;
         value = PlayerPrefs.GetInt(_character + index) != 0;
@@ -92,7 +112,29 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetInt(_weapon + index, isBuyed ? 1 : 0);
     }
 
-    static public bool GetWeaonBuyed(int index)
+    static public bool GetWeaponBuyed(int index)
+    {
+        bool value;
+        value = PlayerPrefs.GetInt(_weapon + index) != 0;
+        return value;
+    }
+
+    static public void SetBulletParticle(int value)
+    {
+        PlayerPrefs.SetInt(_bullet, value);
+    }
+
+    static public int GetBulletParticle()
+    {
+        return PlayerPrefs.GetInt(_bullet);
+    }
+
+    static public void SetBulletParticleBuyed(int index, bool isBuyed)
+    {
+        PlayerPrefs.SetInt(_weapon + index, isBuyed ? 1 : 0);
+    }
+
+    static public bool GetBulletParticleBuyed(int index)
     {
         bool value;
         value = PlayerPrefs.GetInt(_weapon + index) != 0;

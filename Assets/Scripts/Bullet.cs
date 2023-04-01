@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -11,12 +12,16 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private int _speed;
     [SerializeField] private ParticleSystem _hittingWall;
+    [SerializeField] private BuletParticleList _list;
 
     private Rigidbody _rigidbody;
+    private GameObject _particleTemplate;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _particleTemplate = Instantiate(_list.TakeOneObject(Save.GetBulletParticle()), transform.position, transform.rotation);
+        _particleTemplate.transform.SetParent(transform);
     }
 
     private void Update()

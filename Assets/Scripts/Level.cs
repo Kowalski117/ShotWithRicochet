@@ -17,15 +17,18 @@ public class Level : MonoBehaviour
     private int _allEnemy = 0;
     private int _allItem = 0;
     private bool _isLevelPassed;
-
-    public int Coins => _coins;
-    public int MaxBullets => _maxBullets;
-
-    public int AllEnemy => _allEnemy;
-    public int AllItem => _allItem;
+    private int _star = 0;
+    private int _healthEnemy=0;
+    private int _healthItem=0;
 
     public event UnityAction BulletCrashed;
     public event UnityAction CoinAdded;
+
+    public int Coins => _coins;
+    public int MaxBullets => _maxBullets;
+    public int AllEnemy => _allEnemy;
+    public int AllItem => _allItem;
+    public int Star => _star;
 
     private void Awake()
     {
@@ -33,12 +36,15 @@ public class Level : MonoBehaviour
         {
             _allEnemy++;
             _maxBullets += enemy.Health;
+            _healthEnemy += enemy.Health;
+
         }
 
         foreach (Item item in GetComponentsInChildren<Item>())
         {
             _allItem++;
             _maxBullets += item.Health;
+            _healthItem += item.Health;
         }
 
         _player = GetComponentInChildren<Player>();
@@ -90,17 +96,13 @@ public class Level : MonoBehaviour
     private void SubtractEnemy()
     {
         _allEnemy--;
-        StartCoroutine(Slowmo());
 
         if (_isLevelPassed)
             _coins += (_numberCoinsEnemy / _rewardIsLess);
         else
-            _coins += _numberCoinsEnemy;
+            _coins += _numberCoinsEnemy;       
 
-        if (_allEnemy <= 0)
-            EndGame();
-        else
-            BulletBroke();
+        BulletBroke();
 
         CoinAdded?.Invoke();
     }
@@ -108,7 +110,6 @@ public class Level : MonoBehaviour
     private void SubtractItem()
     {
         _allItem--;
-        StartCoroutine(Slowmo());
 
         if (_isLevelPassed)
             _coins += (_numberCoinsItem / _rewardIsLess);
@@ -124,7 +125,7 @@ public class Level : MonoBehaviour
         _numberBrokenBullets++;
         BulletCrashed?.Invoke();
 
-        if (_numberBrokenBullets >= _maxBullets)
+        if (_numberBrokenBullets >= _maxBullets || _allEnemy <= 0)
             EndGame();
     }
 
@@ -132,6 +133,7 @@ public class Level : MonoBehaviour
     {
         if (_allEnemy <= 0)
         {
+            CountStar();
             _win.SetActive(true);
             _player.Win();
             SaveIs();
@@ -142,19 +144,26 @@ public class Level : MonoBehaviour
         }
     }
 
-    IEnumerator Slowmo()
+    private void CountStar()
     {
-        Time.timeScale = 0.3f;
-        yield return new WaitForSeconds(0.2f);
-        Time.timeScale = 0.6f;
-        yield return new WaitForSeconds(0.2f);
-        Time.timeScale = 1;
+        if(_healthEnemy == _numberBrokenBullets)
+        {
+            _star = 3;
+        }
+        else if (_healthEnemy + _healthItem >= _numberBrokenBullets)
+        {
+            _star = 2;
+        }
+        else
+        {
+            _star = 1;
+        }
     }
 
     private void SaveIs()
     {
         int coins;
-        coins = _coins + Save.Coins();
-        Save.LevelStats(coins, true);
+        coins = _coins + Save.GetCoins();
+        Save.LevelStats(coins, true,_star);
     }
 }

@@ -9,6 +9,8 @@ public abstract class Weapon : MonoBehaviour
 
     protected Transform _shotPoint;
 
+    public int Price => _price;
+
     private void Start()
     {
         _shotPoint = GetComponentInChildren<ShotPoint>().transform;

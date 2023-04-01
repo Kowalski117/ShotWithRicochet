@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pistolPoint: {fileID: 2960987195758636284}
   _weapons: {fileID: 11400000, guid: 0e63ceb7bea453d47840bb7957bfe0e1, type: 2}
+  _price: 60
 --- !u!1 &1486269869789454214
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class ButtonNext : MonoBehaviour
     {
         if(SceneManager.sceneCountInBuildSettings-1 == SceneManager.GetActiveScene().buildIndex)
         {
+            _button.transition = Selectable.Transition.ColorTint;
             _button.interactable = false;
         }
     }
