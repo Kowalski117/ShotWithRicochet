@@ -4,6 +4,7 @@ public class ShopBullet : ShopObject
 {
     [SerializeField] private GameObject _bullet;
     [SerializeField] private float _rotate;
+    [SerializeField] private GameObject _spotlight;
 
     private void Awake()
     {
@@ -14,6 +15,18 @@ public class ShopBullet : ShopObject
     private void FixedUpdate()
     {
         transform.Rotate(0, _rotate, 0);
+    }
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        _spotlight.SetActive(false);
+    }
+
+    public override void OnDisable()
+    {
+        base.OnDisable();
+        _spotlight.SetActive(true);
     }
 
     public override void GetSaveValueSelect()

@@ -1,14 +1,11 @@
 using Agava.YandexGames;
 using System.Collections;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Language : MonoBehaviour
 {
-
     private static string _current;
-
+    
     private void Start()
     {
         StartCoroutine(Lang());
@@ -16,6 +13,9 @@ public class Language : MonoBehaviour
 
     IEnumerator Lang()
     {
+#if !UNITY_WEBGL || UNITY_EDITOR
+        yield break;
+#endif
         if (!YandexGamesSdk.IsInitialized)
             yield return YandexGamesSdk.Initialize();
 
@@ -25,6 +25,7 @@ public class Language : MonoBehaviour
             _current = Save.GetLanguage();
         Set();
         Save.SetLanguage(_current);
+        StickyAd.Show();
     }
 
     private void Set()

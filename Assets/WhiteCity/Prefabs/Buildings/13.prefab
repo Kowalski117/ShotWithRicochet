@@ -25,13 +25,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146522}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 23.606567, y: 47.343964, z: -89.80304}
-  m_LocalScale: {x: 0.18562318, y: 0.18562318, z: 0.18562318}
-  m_Children: []
+  m_LocalScale: {x: 0.18562317, y: 0.18562318, z: 0.18562317}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5535720045192776486}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &3312316
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51,10 +53,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,3 +85,78 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &5530998211222754370
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 487114}
+    m_Modifications:
+    - target: {fileID: 1847726074656366, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_Name
+      value: DanceClub
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.62541
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.6254094
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.62541
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 174.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+--- !u!4 &5535720045192776486 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4742866433302372, guid: 2f1a432bb111d684ba5330cd5d1ffbd9, type: 3}
+  m_PrefabInstance: {fileID: 5530998211222754370}
+  m_PrefabAsset: {fileID: 0}

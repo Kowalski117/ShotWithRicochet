@@ -1,15 +1,17 @@
 using Agava.YandexGames;
-using System.Collections;
+using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
 
 public class AdCoinButton : MonoBehaviour
 {
+    [SerializeField] private Level _level;
+    [SerializeField] private TMP_Text _coinText;
+    [SerializeField] private MixerSetting _mixer;
     private Button _button;
-    private Coroutine _coroutine;
+    private int _coinLevel;
 
     private void Awake()
     {
@@ -25,25 +27,19 @@ public class AdCoinButton : MonoBehaviour
         _button.onClick.RemoveListener(ShowAd);
     }
 
+    private void AddCoin()
+    {
+        int coin;
+        _coinLevel = _level.Coins;
+        coin = Save.GetCoins() + _coinLevel;
+        Save.SetCoins(coin);
+        _coinLevel += _coinLevel;
+        _coinText.text = _coinLevel.ToString();
+        _button.interactable = false;
+    }
+    
     private void ShowAd()
     {
-        if(_coroutine != null )
-            StopCoroutine(_coroutine);
-        else
-            _coroutine = StartCoroutine(ShowShouldInvokeErrorCallback());
-    }
-
-    public IEnumerator ShowShouldInvokeErrorCallback()
-    {
-        Debug.Log("реклама");
-        bool callbackInvoked = false;
-        VideoAd.Show(onErrorCallback: (message) =>
-        {
-            callbackInvoked = true;
-        });
-
-        yield return new WaitForSecondsRealtime(1);
-
-        Assert.IsTrue(callbackInvoked);
+        VideoAd.Show(() => _mixer.Mute(), AddCoin, () => _mixer.Load(), null);
     }
 }

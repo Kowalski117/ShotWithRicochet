@@ -5,7 +5,10 @@ public class Player : MonoBehaviour
     [SerializeField] private CharactersList _character;
     [SerializeField] private FixedJoystick _joystick;
     [SerializeField] private RaycastReflection _reflection;
-
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _aim;
+    [SerializeField] private AudioClip _shot;
+    
     private MovePlayer _player;
     private GameObject _playerTemplate;
     private int _bullets;
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
         _animator.SetBool(_isAim, true);
         _weapon.gameObject.SetActive(true);
         _reflection.gameObject.SetActive(true);
+        _audioSource.PlayOneShot(_aim);
     }
 
     public void Shot()
@@ -46,6 +50,7 @@ public class Player : MonoBehaviour
         {
             _bullets--;
             _weapon.Shot();
+            _audioSource.PlayOneShot(_shot);
         }
 
         _animator.SetBool(_isAim, false);

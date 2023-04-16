@@ -46,12 +46,12 @@ public class LevelImage : MonoBehaviour
 
     private void LoadLevel()
     {
-        SceneManager.LoadScene(_indexLevel.ToString());
+        SceneManager.LoadScene(_indexLevel);
     }
 
     private void StarChangeSprite()
     {
-        for (int i = 0; i < Save.GetStars(_indexLevel); i++)
+        for (int i = 0; i < Save.GetStarsLevel(_indexLevel); i++)
         {
             _stars[i].GetComponent<Image>().sprite = _goldStar;
         }

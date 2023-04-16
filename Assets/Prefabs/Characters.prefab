@@ -48,3 +48,6 @@ MonoBehaviour:
   _left: {fileID: 0}
   _right: {fileID: 0}
   _select: {fileID: 0}
+  _buy: {fileID: 0}
+  _textPrice: {fileID: 0}
+  _textCoins: {fileID: 0}

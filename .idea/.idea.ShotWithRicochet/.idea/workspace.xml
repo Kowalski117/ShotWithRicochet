@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="766f9ea3-34df-4d14-a561-353633c7fdba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Demo/Materials/dev2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Demo/Materials/dev2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Combat/Death/Skulls/EvilDeath.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Combat/Death/Skulls/EvilDeath.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Combat/Decals/Bullet Decal/BulletDecalStone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Combat/Decals/Bullet Decal/BulletDecalStone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Combat/Explosions/BulletExplosion/BulletExplosionBlue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Combat/Explosions/BulletExplosion/BulletExplosionBlue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Sound/etfx_explosion_bullet.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Sound/etfx_explosion_bullet.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LeanLocalization.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LeanLocalization.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Bullet Image.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Bullet Image.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Bullets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Bullets.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Show Ad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Show Ad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Skip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Skip.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Weapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Button Weapon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Clear Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Clear Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Close Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Close Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Language Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Language Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Left Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Left Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Menu Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Menu Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Music Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Music Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Next Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Next Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Nextf Button.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Nextf Button.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Play Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Play Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Rating Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Rating Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Restart Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Restart Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Rigth Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Rigth Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Setting Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Setting Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Sound Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Buttons/Sound Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Level Image.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Level Image.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Panel Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Panel Level.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Panel No Ammo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Panel No Ammo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Panel Win.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Panel Win.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Setting Game.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Setting Game.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Setting Main.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Setting Main.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Gun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/3.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/3.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/4.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/4.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/5.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/5.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopCharacters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopCharacters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/ShopObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/AdCoinButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/AdCoinButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/Language.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/Language.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/LevelImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/LevelImage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/ViewBullets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/ViewBullets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/ViewLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/ViewStatsLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/ViewLevel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/ViewStatsLevel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Pistol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Pistol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/App panel@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprite/App panel@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Panel Bullet .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Panel Bullet .png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Panel Gold@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprite/Panel Gold@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Panel level@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprite/Panel level@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/n2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/n2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/eeee.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/eeee.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/photo_2016-05-15_10-21-39.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/photo_2016-05-15_10-21-39.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Buildings/13.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Buildings/13.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rating.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackgrounSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/MixerSetting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/LevelNumberText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/LeaderBoard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShowInterstitialAd.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.agava.yandexgames@e6d74d2a2e/Runtime/Leaderboard/Leaderboard.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/ShopCharacters.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraPosition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/ViewLevel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/ViewStatsLevel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/LevelNamberText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/LevelNumberText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/ViewBullets.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/LevelImage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ShowStickyAd.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/AutorizatoinButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/LeaderBoardPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/ShopObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/ShopBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Pistol.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BackgrounSound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundButtonClick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/MusicButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/Setting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/MixerSetting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/AdCoinButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/Language.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ShowInterstitialAd.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Save.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rating.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/LeaderBoard.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NsutLhqCVGmqG6WzYcO1Fiz2Yf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="766f9ea3-34df-4d14-a561-353633c7fdba" name="Default Changelist" comment="" />
+      <created>1680465328077</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680465328077</updated>
+      <workItem from="1680465335727" duration="240000" />
+      <workItem from="1680465617940" duration="220000" />
+      <workItem from="1680465885630" duration="133000" />
+      <workItem from="1680466074497" duration="1551000" />
+      <workItem from="1680467824905" duration="458000" />
+      <workItem from="1680468593096" duration="323000" />
+      <workItem from="1680539584388" duration="12337000" />
+      <workItem from="1680713040373" duration="8948000" />
+      <workItem from="1680799048946" duration="2904000" />
+      <workItem from="1681151016374" duration="8672000" />
+      <workItem from="1681234769945" duration="9682000" />
+      <workItem from="1681656215335" duration="15069000" />
+      <workItem from="1681674085848" duration="1028000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="266" y="350" key="SettingsEditor" timestamp="1680553702825">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="266" y="350" key="SettingsEditor/0.0.2560.1392@0.0.2560.1392" timestamp="1680553702825" />
+    <state x="92" y="92" width="2376" height="1208" key="VCS.FileHistoryDialog" timestamp="1681160536301">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="92" y="92" width="2376" height="1208" key="VCS.FileHistoryDialog/0.0.2560.1392@0.0.2560.1392" timestamp="1681160536301" />
+    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup" timestamp="1681246315128">
+      <screen x="0" y="0" width="2560" height="1392" />
+    </state>
+    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392@0.0.2560.1392" timestamp="1681246315128" />
+  </component>
+</project>

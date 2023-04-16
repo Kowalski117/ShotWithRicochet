@@ -32,7 +32,7 @@ public abstract class ShopObject : MonoBehaviour
         SetActiveButton();
     }
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
         SetActiveButton();
         _left.onClick.AddListener(OnClickLeftButton);
@@ -41,7 +41,7 @@ public abstract class ShopObject : MonoBehaviour
         _buy.onClick.AddListener(OnClickByeButton);
     }
 
-    private void OnDisable()
+    public virtual void OnDisable()
     {
         _left.onClick.RemoveListener(OnClickLeftButton);
         _right.onClick.RemoveListener(OnClickRigthButton);

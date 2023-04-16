@@ -1,4 +1,4 @@
-using System.Collections;
+using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +11,10 @@ public class Save : MonoBehaviour
     private static string _weapon = "Weapons";
     private static string _bullet = "Bullet";
     private static string _stars = "Stars";
+    private static string _allStars = "AllStars";
+    private static string _leaderBoard = "Stars";
+    private static string _musicVolume = "MusicVolume";
+    private static string _soundVolume = "SoundVolume";
 
     private void Awake()
     {
@@ -29,9 +33,22 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetInt(_coins, coins);
     }
 
-    static public int GetStars(int stars)
+    static public int GetAllStars()
     {
-        return PlayerPrefs.GetInt(_stars+stars);
+        return PlayerPrefs.GetInt(_allStars);
+    }
+
+    static public void SetAllStars(int stars)
+    {
+        PlayerPrefs.SetInt(_allStars, stars);
+#if UNITY_WEBGL && !UNITY_EDITOR
+        Leaderboard.SetScore(_leaderBoard,GetAllStars());
+#endif
+    }
+
+    static public int GetStarsLevel(int indexLevel)
+    {
+        return PlayerPrefs.GetInt(_stars + indexLevel);
     }
 
     static public bool IsLevelPassed()
@@ -53,9 +70,12 @@ public class Save : MonoBehaviour
         SetCoins(coins);
         PlayerPrefs.SetInt(_IsFirstPassLevel + TakeIndexLevel(), levelCompleted ? 1 : 0);
 
-        if (GetStars(TakeIndexLevel()) < stars)
+        if (GetStarsLevel(TakeIndexLevel()) < stars)
         {
-            PlayerPrefs.SetInt(_stars + TakeIndexLevel(),stars);
+            int value;
+            value = stars - GetStarsLevel(TakeIndexLevel());
+            SetAllStars(GetAllStars() + value);
+            PlayerPrefs.SetInt(_stars + TakeIndexLevel(), stars);
         }
     }
 
@@ -131,13 +151,37 @@ public class Save : MonoBehaviour
 
     static public void SetBulletParticleBuyed(int index, bool isBuyed)
     {
-        PlayerPrefs.SetInt(_weapon + index, isBuyed ? 1 : 0);
+        PlayerPrefs.SetInt(_bullet + index, isBuyed ? 1 : 0);
     }
 
     static public bool GetBulletParticleBuyed(int index)
     {
         bool value;
-        value = PlayerPrefs.GetInt(_weapon + index) != 0;
+        value = PlayerPrefs.GetInt(_bullet + index) != 0;
+        return value;
+    }
+    
+    static public void SetMusicIsOn(bool isOnMusic)
+    {
+        PlayerPrefs.SetInt(_musicVolume, isOnMusic ? 0 : 1);
+    }
+
+    static public bool GetMusicIsOn()
+    {
+        bool value;
+        value = PlayerPrefs.GetInt(_musicVolume) == 0;
+        return value;
+    } 
+    
+    static public void SetSoundIsOn(bool isOnSound)
+    {
+        PlayerPrefs.SetInt(_soundVolume, isOnSound ? 0 : 1);
+    }
+
+    static public bool GetSoundIsOn()
+    {
+        bool value;
+        value = PlayerPrefs.GetInt(_soundVolume) == 0;
         return value;
     }
 }

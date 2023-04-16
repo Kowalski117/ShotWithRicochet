@@ -1,6 +1,8 @@
 using System.Collections;
+using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -9,20 +11,23 @@ public class Level : MonoBehaviour
     [SerializeField] private int _numberCoinsEnemy;
     [SerializeField] private int _numberCoinsItem;
     [SerializeField] private int _rewardIsLess;
+    [SerializeField] private Button _addBullet;
+    [SerializeField] private MixerSetting _mixer;
 
-    private int _maxBullets = 1;
     private Player _player;
+    private int _maxBullets = 1;
     private int _coins;
     private int _numberBrokenBullets = 0;
     private int _allEnemy = 0;
     private int _allItem = 0;
     private bool _isLevelPassed;
     private int _star = 0;
-    private int _healthEnemy=0;
-    private int _healthItem=0;
+    private int _healthEnemy = 0;
+    private int _healthItem = 0;
 
     public event UnityAction BulletCrashed;
     public event UnityAction CoinAdded;
+    public event UnityAction BulletAdded;
 
     public int Coins => _coins;
     public int MaxBullets => _maxBullets;
@@ -37,7 +42,6 @@ public class Level : MonoBehaviour
             _allEnemy++;
             _maxBullets += enemy.Health;
             _healthEnemy += enemy.Health;
-
         }
 
         foreach (Item item in GetComponentsInChildren<Item>())
@@ -73,6 +77,8 @@ public class Level : MonoBehaviour
 
         foreach (Wall wall in GetComponentsInChildren<Wall>())
             wall.BulletCrashed += BulletBroke;
+
+        _addBullet.onClick.AddListener(ShowAd);
     }
 
     private void OnDisable()
@@ -91,6 +97,17 @@ public class Level : MonoBehaviour
 
         foreach (Wall wall in GetComponentsInChildren<Wall>())
             wall.BulletCrashed -= BulletBroke;
+
+        _addBullet.onClick.RemoveListener(ShowAd);
+    }
+
+    private void AddBullet()
+    {
+        int value = 1;
+        _maxBullets++;
+        BulletAdded?.Invoke();
+        _player.SetBullets(value);
+        _noAmmo.SetActive(false);
     }
 
     private void SubtractEnemy()
@@ -100,10 +117,9 @@ public class Level : MonoBehaviour
         if (_isLevelPassed)
             _coins += (_numberCoinsEnemy / _rewardIsLess);
         else
-            _coins += _numberCoinsEnemy;       
+            _coins += _numberCoinsEnemy;
 
         BulletBroke();
-
         CoinAdded?.Invoke();
     }
 
@@ -146,7 +162,7 @@ public class Level : MonoBehaviour
 
     private void CountStar()
     {
-        if(_healthEnemy == _numberBrokenBullets)
+        if (_healthEnemy == _numberBrokenBullets)
         {
             _star = 3;
         }
@@ -164,6 +180,11 @@ public class Level : MonoBehaviour
     {
         int coins;
         coins = _coins + Save.GetCoins();
-        Save.LevelStats(coins, true,_star);
+        Save.LevelStats(coins, true, _star);
+    }
+
+    private void ShowAd()
+    {
+        VideoAd.Show(() => _mixer.Mute(), AddBullet, () => _mixer.Load(), null);
     }
 }

@@ -1,11 +1,12 @@
 using UnityEngine;
-
+[RequireComponent(typeof(AudioSource))]
 public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] private string _label;
     [SerializeField] private int _price;
     [SerializeField] private bool _isBuyed;
-    [SerializeField] protected Bullet _bullet;
+    [SerializeField] protected Bullet Bullet;
+    protected AudioSource ShotSound;
 
     protected Transform _shotPoint;
 
@@ -14,6 +15,7 @@ public abstract class Weapon : MonoBehaviour
     private void Start()
     {
         _shotPoint = GetComponentInChildren<ShotPoint>().transform;
+        ShotSound = GetComponent<AudioSource>();
     }
 
     public abstract void Shot();
