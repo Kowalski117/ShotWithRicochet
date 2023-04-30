@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd73a5069a1dcd64ba696308138eb2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 2
+  _health: 1
   _death: {fileID: 19872744, guid: cca79b260878071418290367024a6716, type: 3}
   _coins: {fileID: 19812278, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
   _damage: {fileID: 19893728, guid: e518b4ac4faac2246965b820629da9f4, type: 3}

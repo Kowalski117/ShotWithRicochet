@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +8,8 @@ public class Rating : MonoBehaviour
     [SerializeField] private Button _buttonRating;
     [SerializeField] private GameObject _authorization;
     [SerializeField] private GameObject _leaderBoard;
+
+    private bool _isAutorized;
 
     private void OnEnable()
     {
@@ -23,7 +23,23 @@ public class Rating : MonoBehaviour
 
     private void CheckAuthorization()
     {
-        if (PlayerAccount.IsAuthorized)
+        StartCoroutine(CheckWorkSDK());
+    }
+    
+    IEnumerator CheckWorkSDK()
+    {
+#if !UNITY_WEBGL || UNITY_EDITOR
+        yield break;
+#endif
+        if (!YandexGamesSdk.IsInitialized)
+            yield return YandexGamesSdk.Initialize();
+        _isAutorized = PlayerAccount.IsAuthorized;
+        OpenPanel();
+    }
+    
+    private void OpenPanel()
+    {
+        if (_isAutorized)
         {
             _leaderBoard.SetActive(true);
         }

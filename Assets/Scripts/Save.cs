@@ -1,4 +1,5 @@
 using Agava.YandexGames;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,8 @@ public class Save : MonoBehaviour
     private static string _leaderBoard = "Stars";
     private static string _musicVolume = "MusicVolume";
     private static string _soundVolume = "SoundVolume";
+    private static string _day = "Day";
+    private static string _leftToGet = "LeftToGet";
 
     private void Awake()
     {
@@ -183,5 +186,25 @@ public class Save : MonoBehaviour
         bool value;
         value = PlayerPrefs.GetInt(_soundVolume) == 0;
         return value;
+    }
+
+    static public void SetDayUsedGift(int day)
+    {
+        PlayerPrefs.SetInt(_day, day);
+    }
+
+    static public int GetDayUsedGift()
+    {
+       return PlayerPrefs.GetInt(_day);
+    } 
+    
+    static public void SetLeftToGetGift(int leftToGet)
+    {
+        PlayerPrefs.SetInt(_leftToGet, leftToGet);
+    }
+
+    static public int GetLeftToGetGift()
+    {
+        return PlayerPrefs.GetInt(_leftToGet);
     }
 }

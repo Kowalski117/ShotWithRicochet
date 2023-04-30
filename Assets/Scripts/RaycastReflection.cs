@@ -14,11 +14,11 @@ public class RaycastReflection : MonoBehaviour
     private Ray _ray;
     private RaycastHit _hit;
 
+    public int Reflections => _reflections;
+
     private void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-        _reflections = 5;
-        _maxLength = 200;
     }
 
     private void Update()

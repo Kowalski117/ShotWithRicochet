@@ -17,9 +17,7 @@ public class LeaderBoard : MonoBehaviour
 
     private void OnEnable()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        PlayerAccount.RequestPersonalProfileDataPermission(() => GetLeaderboardEntries());
-#endif
+        StartCoroutine(CheckWorkSdkAndShowLeaderboard());
     }
 
     private void OnDisable()
@@ -51,5 +49,15 @@ public class LeaderBoard : MonoBehaviour
                 _list.Add(_currentPlayer);
             }
         }, null, _topPlayersCount, _competingPlayers);
+    }
+    
+    IEnumerator CheckWorkSdkAndShowLeaderboard()
+    {
+#if !UNITY_WEBGL || UNITY_EDITOR
+        yield break;
+#endif
+        if (!YandexGamesSdk.IsInitialized)
+            yield return YandexGamesSdk.Initialize();
+        PlayerAccount.RequestPersonalProfileDataPermission(() => GetLeaderboardEntries());
     }
 }

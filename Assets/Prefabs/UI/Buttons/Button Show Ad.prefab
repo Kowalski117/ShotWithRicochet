@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 261778774209716427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14967464, y: 0.14967464, z: 0.14967464}
+  m_LocalScale: {x: 0.106019035, y: 0.106019035, z: 0.106019035}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5207917502477532868}
@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: 0}
+  m_AnchoredPosition: {x: 127.5, y: 43.7}
   m_SizeDelta: {x: 652.3, y: 447.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &732490477681795131
@@ -111,8 +111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: 0}
-  m_SizeDelta: {x: 40.3, y: 50}
+  m_AnchoredPosition: {x: 54, y: 0}
+  m_SizeDelta: {x: 77.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6093116643763979391
 CanvasRenderer:
@@ -246,7 +246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96, y: 1}
+  m_AnchoredPosition: {x: -26, y: 1}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &805710259620442247
@@ -428,6 +428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _level: {fileID: 0}
   _coinText: {fileID: 0}
+  _mixer: {fileID: 0}
 --- !u!82 &6078850745647840928
 AudioSource:
   m_ObjectHideFlags: 0

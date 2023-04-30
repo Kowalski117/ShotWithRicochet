@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3164948496620523697}
   - component: {fileID: 3951408523928091998}
   - component: {fileID: 5942105919511001863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8896793570793414638}
   - component: {fileID: 1529324065327096642}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

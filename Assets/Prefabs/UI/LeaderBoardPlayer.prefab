@@ -95,6 +95,10 @@ MonoBehaviour:
   _rank: {fileID: 6276683224934182791}
   _name: {fileID: 8847653765962773188}
   _score: {fileID: 4763602102346060703}
+  _image: {fileID: 5512424617672037193}
+  _first: {fileID: 21300000, guid: cabe88004d2dd1643b8f188cda0633ea, type: 3}
+  _second: {fileID: 21300000, guid: 9c4fac3943406cb46b012fc23cfb420c, type: 3}
+  _third: {fileID: 21300000, guid: 8f0134b64657d164099b4eb083f42528, type: 3}
 --- !u!1 &3329671694990315170
 GameObject:
   m_ObjectHideFlags: 0

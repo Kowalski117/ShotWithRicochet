@@ -4,14 +4,17 @@ using UnityEngine.UI;
 
 public class ViewStatsLevel : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _coinsLevel;
+    [SerializeField] private RaycastReflection _raycast;
     [SerializeField] private Level _level;
+    [SerializeField] private TMP_Text _coinsLevel;
     [SerializeField] private TMP_Text _valueEnemy;
     [SerializeField] private TMP_Text _valueItem;
+    [SerializeField] private TMP_Text _valueRicochet;
     
     private void Start()
     {
         _coinsLevel.text = _level.Coins.ToString();
+        _valueRicochet.text = _raycast.Reflections.ToString();
         ChangeStats();
     }
 
