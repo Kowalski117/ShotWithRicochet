@@ -1445,6 +1445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShowInterstitialAd
       objectReference: {fileID: 0}
+    - target: {fileID: 2119427532914450739, guid: 04190d4062289fe4c93ce1ebe695c316, type: 3}
+      propertyPath: _mixer
+      value: 
+      objectReference: {fileID: 1224765993}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04190d4062289fe4c93ce1ebe695c316, type: 3}
 --- !u!1 &909477047

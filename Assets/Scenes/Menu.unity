@@ -1745,6 +1745,7 @@ MonoBehaviour:
   _maxAmountUse: 7
   _textAttempts: {fileID: 1202565852}
   _textButtonCoins: {fileID: 1120536509}
+  _textCoins: {fileID: 670391869}
 --- !u!1 &362818638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9018227832500575356, guid: c745fcd2b3ac3b44b9e88db1991d2c55, type: 3}
@@ -5505,7 +5506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041C\u043E\u043D\u0435\u0442\u044B"
+  m_text: "0 \u041C\u043E\u043D\u0435\u0442\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -8452,6 +8453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShowInterstitialAd
       objectReference: {fileID: 0}
+    - target: {fileID: 2119427532914450739, guid: 04190d4062289fe4c93ce1ebe695c316, type: 3}
+      propertyPath: _mixer
+      value: 
+      objectReference: {fileID: 535077259}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04190d4062289fe4c93ce1ebe695c316, type: 3}
 --- !u!1001 &2171539996616224165

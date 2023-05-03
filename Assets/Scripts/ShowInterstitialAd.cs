@@ -1,11 +1,11 @@
-using System;
 using System.Collections;
 using Agava.YandexGames;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ShowInterstitialAd : MonoBehaviour
 {
+    [SerializeField] private MixerSetting _mixer;
+    
     private void Awake()
     {
         YandexGamesSdk.CallbackLogging = true;
@@ -16,8 +16,7 @@ public class ShowInterstitialAd : MonoBehaviour
 #if !UNITY_WEBGL || UNITY_EDITOR
         yield break;
 #endif
-        
         yield return YandexGamesSdk.Initialize();
-        InterstitialAd.Show();
+        InterstitialAd.Show(() => _mixer.Mute(),(bool _) => _mixer.Load(), null);
     }
 }

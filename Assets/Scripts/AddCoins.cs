@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Agava.YandexGames;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class AddCoins : MonoBehaviour
 {
@@ -13,6 +12,7 @@ public class AddCoins : MonoBehaviour
     [SerializeField] private int _maxAmountUse;
     [SerializeField] private TMP_Text _textAttempts;
     [SerializeField] private TMP_Text _textButtonCoins;
+    [SerializeField] private TMP_Text _textCoins;
 
     private int _leftToGet;
     private int _saveDay;
@@ -54,7 +54,8 @@ public class AddCoins : MonoBehaviour
         _leftToGet--;
         Save.SetCoins(Save.GetCoins()+_coin);
         Save.SetLeftToGetGift(_leftToGet);
-        SceneManager.LoadScene(0);
+        _textCoins.text = Save.GetCoins().ToString();
+        gameObject.SetActive(false);
     }
     
     private void ShowAd()

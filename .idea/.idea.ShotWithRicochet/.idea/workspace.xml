@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="766f9ea3-34df-4d14-a561-353633c7fdba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShotWithRicochet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShotWithRicochet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/LeaderBoardPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/LeaderBoardPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ShowInterstitialAd.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ShowInterstitialAd.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AddCoins.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AddCoins.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShowInterstitialAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShowInterstitialAd.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,14 +73,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/Setting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/MixerSetting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/Language.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ShowInterstitialAd.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rating.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/LeaderBoard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/AdCoinButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AddGold.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AddCoins.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveProgresTraining.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveProgresTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RaycastReflection.cs" />
@@ -85,6 +85,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Name.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/LeaderBoardPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/AdCoinButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AddCoins.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ShowInterstitialAd.cs" />
       </list>
     </option>
   </component>
@@ -146,6 +149,8 @@
       <workItem from="1682437316128" duration="529000" />
       <workItem from="1682875481101" duration="1373000" />
       <workItem from="1682883382750" duration="111000" />
+      <workItem from="1683143294383" duration="1184000" />
+      <workItem from="1683147540164" duration="5875000" />
     </task>
     <servers />
   </component>
@@ -178,9 +183,9 @@
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
     <state x="92" y="92" width="2376" height="1208" key="VCS.FileHistoryDialog/0.0.2560.1392@0.0.2560.1392" timestamp="1682876017888" />
-    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup" timestamp="1682168074133">
+    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup" timestamp="1683143665277">
       <screen x="0" y="0" width="2560" height="1392" />
     </state>
-    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392@0.0.2560.1392" timestamp="1682168074133" />
+    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup/0.0.2560.1392@0.0.2560.1392" timestamp="1683143665277" />
   </component>
 </project>
