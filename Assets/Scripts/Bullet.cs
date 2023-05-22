@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class Bullet : MonoBehaviour
     {
         _rigidbody.velocity = transform.forward * _speed;
     }
-
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<Wall>())

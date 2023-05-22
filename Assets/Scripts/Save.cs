@@ -1,5 +1,4 @@
 using Agava.YandexGames;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -44,8 +43,19 @@ public class Save : MonoBehaviour
     static public void SetAllStars(int stars)
     {
         PlayerPrefs.SetInt(_allStars, stars);
+        int accountScore;
+        
 #if UNITY_WEBGL && !UNITY_EDITOR
-        Leaderboard.SetScore(_leaderBoard,GetAllStars());
+        Leaderboard.GetPlayerEntry(_leaderBoard, (result) =>
+        {
+            if (result != null)
+            {
+                if (result.score < GetAllStars())
+                {
+                    Leaderboard.SetScore(_leaderBoard,GetAllStars());
+                }
+            }
+        });
 #endif
     }
 
