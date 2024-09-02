@@ -1,3 +1,4 @@
+using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,8 +6,6 @@ namespace Source.Scripts
 {
     public class Save : MonoBehaviour
     {
-
-
         private void Awake()
         {
             SetCharacterBuyed(0, true);
@@ -35,13 +34,13 @@ namespace Source.Scripts
             int accountScore;
         
 #if UNITY_WEBGL && !UNITY_EDITOR
-        Leaderboard.GetPlayerEntry(_leaderBoard, (result) =>
+        Leaderboard.GetPlayerEntry(StaticText.LeaderBoard, (result) =>
         {
             if (result != null)
             {
                 if (result.score < GetAllStars())
                 {
-                    Leaderboard.SetScore(_leaderBoard,GetAllStars());
+                    Leaderboard.SetScore(StaticText.LeaderBoard,GetAllStars());
                 }
             }
         });

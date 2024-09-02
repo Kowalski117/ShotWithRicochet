@@ -15,7 +15,7 @@ namespace Source.Scripts.Player
 
         private static string IsAimText = "isAim";
         private static string WinText = "Win";
-        private static Quaternion AngleRotationY = new Quaternion(0, 180, 0, 0);
+        private Quaternion AngleRotationY = new Quaternion(0, 180, 0, 0);
 
         private MovePlayer _player;
         private GameObject _playerTemplate;
