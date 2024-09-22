@@ -8,18 +8,18 @@ namespace Source.Scripts
 
     public class Enemy : MonoBehaviour
     {
+        private static string _hit = "Hit";
+
         [SerializeField] private int _health;
         [SerializeField] private ParticleSystem _death;
         [SerializeField] private ParticleSystem _coins;
         [SerializeField] private ParticleSystem _damage;
         [SerializeField] private List<GameObject> _loots;
 
-        private static string _hit = "Hit";
-
         private Vector3 _pointSpawnDeathAndCoins = new Vector3(0, 1, 0);
         private Vector3 _pointSpawnDamage = new Vector3(0, 2.5f, 0);
         private Animator _animator;
-        
+
         public event UnityAction EnemyDied;
         public event UnityAction BulletHitting;
 
@@ -29,7 +29,7 @@ namespace Source.Scripts
         {
             _animator = GetComponent<Animator>();
         }
-    
+
         public void TakeDamage(int damage)
         {
             _health -= damage;
@@ -55,8 +55,9 @@ namespace Source.Scripts
             {
                 Instantiate(item, transform.position, Quaternion.identity);
             }
+
             Destroy(gameObject);
-            EnemyDied?.Invoke(); 
+            EnemyDied?.Invoke();
         }
     }
 }

@@ -1381,6 +1381,7 @@ GameObject:
   - component: {fileID: -7148037853340604296}
   - component: {fileID: -5502934805259326438}
   - component: {fileID: 6686742844306303334}
+  - component: {fileID: 1718815405148645194}
   - component: {fileID: -7850277877586574976}
   m_Layer: 6
   m_Name: Player 6
@@ -1479,8 +1480,23 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1718815405148645194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783940232334215411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0927533ce13f8c74bbb4acf32046a4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pistolPoint: {fileID: 2633329936972157866}
+  _weapons: {fileID: 11400000, guid: 5904ec7c2b3d66a40b4d6392f553db2f, type: 2}
+  _price: 800
 --- !u!114 &-7850277877586574976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,9 +1509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3b60132d5108e40b78beea0ec8387f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pistolPoint: {fileID: 2633329936972157866}
-  _weapons: {fileID: 11400000, guid: 0e63ceb7bea453d47840bb7957bfe0e1, type: 2}
-  _price: 1050
 --- !u!1 &2783940232334215413
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f9d4592dc373f4eb3b96db6b44b826, type: 3}
+  m_Script: {fileID: 11500000, guid: 4889636e48901c3488bfcb757fa19a8d, type: 3}
   m_Name: BulletList
   m_EditorClassIdentifier: 
   _list:

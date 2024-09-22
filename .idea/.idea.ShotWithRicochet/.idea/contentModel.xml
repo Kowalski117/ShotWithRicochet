@@ -697,8 +697,9 @@
             <e p="Level.cs" t="Include" />
             <e p="Name.cs" t="Include" />
             <e p="Player" t="Include">
-              <e p="MovePlayer.cs" t="Include" />
               <e p="Player.cs" t="Include" />
+              <e p="RotationPlayer.cs" t="Include" />
+              <e p="SkinPlayer.cs" t="Include" />
             </e>
             <e p="Rating.cs" t="Include" />
             <e p="RaycastReflection.cs" t="Include" />
@@ -713,11 +714,10 @@
             <e p="SO" t="Include">
               <e p="BuletParticleList.cs" t="Include" />
               <e p="CharactersList.cs" t="Include" />
-              <e p="ScriptableTest.cs" t="Include" />
+              <e p="ObjectList.cs" t="Include" />
               <e p="WeaponsList.cs" t="Include" />
             </e>
             <e p="SoundButtonClick.cs" t="Include" />
-            <e p="StaticText.cs" t="Include" />
             <e p="Ui" t="Include">
               <e p="AdCoinButton.cs" t="Include" />
               <e p="AutorizatoinButton.cs" t="Include" />
@@ -743,6 +743,7 @@
               <e p="ViewBullets.cs" t="Include" />
               <e p="ViewStatsLevel.cs" t="Include" />
             </e>
+            <e p="ValueConstants.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
             <e p="Weapons" t="Include">
               <e p="Pistol.cs" t="Include" />

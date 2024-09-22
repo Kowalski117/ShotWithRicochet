@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Source.Scripts.SO
 {
-    [CreateAssetMenu(fileName = "New List Characters", menuName = "CharactersList", order = 51)]
-    public abstract class ScriptableTest : ScriptableObject
+    [CreateAssetMenu(fileName = "New List Object", menuName = "ObjectList", order = 51)]
+    public class ObjectList : ScriptableObject
     {
         [SerializeField] private List<GameObject> _list;
 
@@ -13,7 +13,9 @@ namespace Source.Scripts.SO
         public GameObject TakeOneObject(int index)
         {
             if (index >= 0 && index < _list.Count)
+            {
                 return _list[index];
+            }
             else
             {
                 return null;

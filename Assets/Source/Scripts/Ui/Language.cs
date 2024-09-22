@@ -6,11 +6,30 @@ namespace Source.Scripts.Ui
 {
     public class Language : MonoBehaviour
     {
+        private static string _empty = "";
         private string _current;
-    
+
         private void Start()
         {
             StartCoroutine(Lang());
+        }
+
+        private void Set()
+        {
+            switch (_current)
+            {
+                case "en":
+                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(ValueConstants.English);
+                    break;
+
+                case "ru":
+                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(ValueConstants.Russian);
+                    break;
+
+                case "tr":
+                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(ValueConstants.Turkish);
+                    break;
+            }
         }
 
         IEnumerator Lang()
@@ -21,31 +40,13 @@ namespace Source.Scripts.Ui
             if (!YandexGamesSdk.IsInitialized)
                 yield return YandexGamesSdk.Initialize();
 
-            if (Save.GetLanguage() == "")
+            if (Save.GetLanguage() == _empty)
                 _current = YandexGamesSdk.Environment.i18n.lang;
             else
                 _current = Save.GetLanguage();
             Set();
             Save.SetLanguage(_current);
             StickyAd.Show();
-        }
-
-        private void Set()
-        {
-            switch (_current)
-            {
-                case "en":
-                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(StaticText.English);
-                    break;
-
-                case "ru":
-                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(StaticText.Russian);
-                    break;
-
-                case "tr":
-                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(StaticText.Turkish);
-                    break;
-            }
         }
     }
 }

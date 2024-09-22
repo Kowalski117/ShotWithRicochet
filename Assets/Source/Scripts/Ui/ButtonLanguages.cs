@@ -9,7 +9,7 @@ namespace Source.Scripts.Ui
     {
         private Button _button;
         private int _value = 0;
-        private List<string> _languages = new List<string>() {StaticText.En,StaticText.Ru,StaticText.Tr};
+        private List<string> _languages = new List<string>() {ValueConstants.En, ValueConstants.Ru, ValueConstants.Tr};
 
         private void Awake()
         {
@@ -20,6 +20,7 @@ namespace Source.Scripts.Ui
         {
             _button.onClick.AddListener(ChangeLanguages);
         }
+
         private void OnDisable()
         {
             _button.onClick.RemoveListener(ChangeLanguages);
@@ -50,17 +51,18 @@ namespace Source.Scripts.Ui
             switch (_value)
             {
                 case 0:
-                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(StaticText.English);
+                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(ValueConstants.English);
                     break;
 
                 case 1:
-                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(StaticText.Russian);
+                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(ValueConstants.Russian);
                     break;
 
                 case 2:
-                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(StaticText.Turkish);
+                    Lean.Localization.LeanLocalization.SetCurrentLanguageAll(ValueConstants.Turkish);
                     break;
             }
+
             Save.SetLanguage(_languages[_value]);
         }
     }

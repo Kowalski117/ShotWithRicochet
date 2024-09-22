@@ -16,7 +16,7 @@ namespace Source.Scripts.Ui
 
         private void Start()
         {
-            if(SceneManager.sceneCountInBuildSettings-1 == SceneManager.GetActiveScene().buildIndex)
+            if (SceneManager.sceneCountInBuildSettings - 1 == SceneManager.GetActiveScene().buildIndex)
             {
                 _button.transition = Selectable.Transition.ColorTint;
                 _button.interactable = false;

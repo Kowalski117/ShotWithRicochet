@@ -9,7 +9,7 @@ namespace Source.Scripts.Ui
     public class AutorizatoinButton : MonoBehaviour
     {
         [SerializeField] private Button _buttonClose;
-        
+
         private Button _button;
 
         private void Awake()
@@ -26,6 +26,7 @@ namespace Source.Scripts.Ui
         {
             _button.onClick.RemoveListener(Authorize);
         }
+
         private void Authorize()
         {
             PlayerAccount.Authorize();

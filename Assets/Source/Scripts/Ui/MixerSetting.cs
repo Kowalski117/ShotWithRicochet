@@ -6,6 +6,9 @@ namespace Source.Scripts.Ui
 {
     public class MixerSetting : MonoBehaviour
     {
+        private static string MusicVolumeName = "MusicVolume";
+        private static string SoundVolumeName = "SoundVolume";
+
         [SerializeField] private AudioMixerGroup _mixer;
         [SerializeField] private Button _music;
         [SerializeField] private Button _sound;
@@ -16,9 +19,6 @@ namespace Source.Scripts.Ui
         [SerializeField] private Image _iconMusic;
         [SerializeField] private Image _iconSound;
 
-        private static string MusicVolumeName = "MusicVolume";
-        private static string SoundVolumeName = "SoundVolume";
-        
         private bool _isOnMusic;
         private bool _isOnSound;
         private float _maxVolume = 0;
@@ -65,8 +65,9 @@ namespace Source.Scripts.Ui
             {
                 _isOnMusic = true;
             }
+
             Save.SetMusicIsOn(_isOnMusic);
-            ChangeVolume(_isOnMusic,MusicVolumeName);
+            ChangeVolume(_isOnMusic, MusicVolumeName);
         }
 
         private void OnClickSound()
@@ -79,11 +80,12 @@ namespace Source.Scripts.Ui
             {
                 _isOnSound = true;
             }
+
             Save.SetSoundIsOn(_isOnSound);
-            ChangeVolume(_isOnSound,SoundVolumeName);
+            ChangeVolume(_isOnSound, SoundVolumeName);
         }
-    
-        private void ChangeVolume(bool value,string name)
+
+        private void ChangeVolume(bool value, string name)
         {
             if (value)
             {
@@ -93,6 +95,7 @@ namespace Source.Scripts.Ui
             {
                 _mixer.audioMixer.SetFloat(name, _minVolume);
             }
+
             ChangeButtonSprite();
         }
 
@@ -106,7 +109,7 @@ namespace Source.Scripts.Ui
             {
                 _iconMusic.sprite = _musicOff;
             }
-        
+
             if (_isOnSound)
             {
                 _iconSound.sprite = _soundOn;

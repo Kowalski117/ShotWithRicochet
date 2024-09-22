@@ -14,6 +14,7 @@ namespace Source.Scripts.Shop
         {
             Save.SetCharacter(Value);
         }
+        
         public override void GetSaveValueBye()
         {
             IsBuyed = Save.GetCharacterBuyed(Value);
@@ -26,14 +27,14 @@ namespace Source.Scripts.Shop
 
         public override void SetPrice()
         {
-            Price = Template.GetComponent<MovePlayer>().Price;
+            Price = Template.GetComponent<SkinPlayer>().Price;
             base.SetPrice();
         }
 
         public override void Set()
         {
             base.Set();
-            Template.GetComponent<MovePlayer>().enabled = false;
+            Template.GetComponent<RotationPlayer>().enabled = false;
             Template.GetComponentInChildren<Weapon>().gameObject.SetActive(false);
         }
     }

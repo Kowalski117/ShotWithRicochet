@@ -6,7 +6,7 @@ namespace Source.Scripts.Shop
     public class ShopWeapon : ShopObject
     {
         private static Vector3 Scale = new Vector3(2f, 2f, 2f);
-        
+
         public override void GetSaveValueSelect()
         {
             Value = Save.GetWeapon();

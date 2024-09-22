@@ -117,7 +117,7 @@ namespace Source.Scripts
             _allEnemy--;
 
             if (_isLevelPassed)
-                _coins += (_numberCoinsEnemy / _rewardIsLess);
+                _coins += _numberCoinsEnemy / _rewardIsLess;
             else
                 _coins += _numberCoinsEnemy;
 
@@ -130,7 +130,7 @@ namespace Source.Scripts
             _allItem--;
 
             if (_isLevelPassed)
-                _coins += (_numberCoinsItem / _rewardIsLess);
+                _coins += _numberCoinsItem / _rewardIsLess;
             else
                 _coins += _numberCoinsItem;
 

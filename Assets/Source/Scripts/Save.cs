@@ -13,26 +13,25 @@ namespace Source.Scripts
             SetBulletParticleBuyed(0, true);
         }
 
-        static public int GetCoins()
+        public static int GetCoins()
         {
-            return PlayerPrefs.GetInt(StaticText.Coins);
+            return PlayerPrefs.GetInt(ValueConstants.Coins);
         }
 
-        static public void SetCoins(int coins)
+        public static void SetCoins(int coins)
         {
-            PlayerPrefs.SetInt(StaticText.Coins, coins);
+            PlayerPrefs.SetInt(ValueConstants.Coins, coins);
         }
 
-        static public int GetAllStars()
+        public static int GetAllStars()
         {
-            return PlayerPrefs.GetInt(StaticText.AllStars);
+            return PlayerPrefs.GetInt(ValueConstants.AllStars);
         }
 
-        static public void SetAllStars(int stars)
+        public static void SetAllStars(int stars)
         {
-            PlayerPrefs.SetInt(StaticText.AllStars, stars);
-            int accountScore;
-        
+            PlayerPrefs.SetInt(ValueConstants.AllStars, stars);
+
 #if UNITY_WEBGL && !UNITY_EDITOR
         Leaderboard.GetPlayerEntry(StaticText.LeaderBoard, (result) =>
         {
@@ -47,163 +46,162 @@ namespace Source.Scripts
 #endif
         }
 
-        static public int GetStarsLevel(int indexLevel)
+        public static int GetStarsLevel(int indexLevel)
         {
-            return PlayerPrefs.GetInt(StaticText.Stars + indexLevel);
+            return PlayerPrefs.GetInt(ValueConstants.Stars + indexLevel);
         }
 
-        static public bool IsLevelPassed()
+        public static bool IsLevelPassed()
         {
             bool value;
-            value = PlayerPrefs.GetInt(StaticText.IsFirstPassLevel + TakeIndexLevel().ToString()) != 0;
+            value = PlayerPrefs.GetInt(ValueConstants.IsFirstPassLevel + TakeIndexLevel().ToString()) != 0;
             return value;
         }
 
-        static public bool IsLevelPassed(int indexLevel)
+        public static bool IsLevelPassed(int indexLevel)
         {
             bool value;
-            value = PlayerPrefs.GetInt(StaticText.IsFirstPassLevel + indexLevel.ToString()) != 0;
+            value = PlayerPrefs.GetInt(ValueConstants.IsFirstPassLevel + indexLevel.ToString()) != 0;
             return value;
         }
 
-        static public void LevelStats(int coins, bool levelCompleted, int stars)
+        public static void LevelStats(int coins, bool levelCompleted, int stars)
         {
             SetCoins(coins);
-            PlayerPrefs.SetInt(StaticText.IsFirstPassLevel + TakeIndexLevel(), levelCompleted ? 1 : 0);
+            PlayerPrefs.SetInt(ValueConstants.IsFirstPassLevel + TakeIndexLevel(), levelCompleted ? 1 : 0);
 
             if (GetStarsLevel(TakeIndexLevel()) < stars)
             {
                 int value;
                 value = stars - GetStarsLevel(TakeIndexLevel());
                 SetAllStars(GetAllStars() + value);
-                PlayerPrefs.SetInt(StaticText.Stars + TakeIndexLevel(), stars);
+                PlayerPrefs.SetInt(ValueConstants.Stars + TakeIndexLevel(), stars);
             }
         }
 
-        static public int TakeIndexLevel()
+        public static int TakeIndexLevel()
         {
             return SceneManager.GetActiveScene().buildIndex;
         }
 
-        static public void SetLanguage(string language)
+        public static void SetLanguage(string language)
         {
-            PlayerPrefs.SetString(StaticText.Language, language);
+            PlayerPrefs.SetString(ValueConstants.Language, language);
         }
 
-        static public string GetLanguage()
+        public static string GetLanguage()
         {
-            return PlayerPrefs.GetString(StaticText.Language);
+            return PlayerPrefs.GetString(ValueConstants.Language);
         }
 
-        static public void SetCharacter(int value)
+        public static void SetCharacter(int value)
         {
-            PlayerPrefs.SetInt(StaticText.Character, value);
+            PlayerPrefs.SetInt(ValueConstants.Character, value);
         }
 
-        static public int GetCharacter()
+        public static int GetCharacter()
         {
-            return PlayerPrefs.GetInt(StaticText.Character);
+            return PlayerPrefs.GetInt(ValueConstants.Character);
         }
 
-
-        static public void SetCharacterBuyed(int index, bool isBuyed)
+        public static void SetCharacterBuyed(int index, bool isBuyed)
         {
-            PlayerPrefs.SetInt(StaticText.Character + index, isBuyed ? 1 : 0);
+            PlayerPrefs.SetInt(ValueConstants.Character + index, isBuyed ? 1 : 0);
         }
 
-        static public bool GetCharacterBuyed(int index)
+        public static bool GetCharacterBuyed(int index)
         {
             bool value;
-            value = PlayerPrefs.GetInt(StaticText.Character + index) != 0;
+            value = PlayerPrefs.GetInt(ValueConstants.Character + index) != 0;
             return value;
         }
 
-        static public void SetWeapon(int value)
+        public static void SetWeapon(int value)
         {
-            PlayerPrefs.SetInt(StaticText.Weapon, value);
+            PlayerPrefs.SetInt(ValueConstants.Weapon, value);
         }
 
-        static public int GetWeapon()
+        public static int GetWeapon()
         {
-            return PlayerPrefs.GetInt(StaticText.Weapon);
+            return PlayerPrefs.GetInt(ValueConstants.Weapon);
         }
 
-        static public void SetWeaponBuyed(int index, bool isBuyed)
+        public static void SetWeaponBuyed(int index, bool isBuyed)
         {
-            PlayerPrefs.SetInt(StaticText.Weapon + index, isBuyed ? 1 : 0);
+            PlayerPrefs.SetInt(ValueConstants.Weapon + index, isBuyed ? 1 : 0);
         }
 
-        static public bool GetWeaponBuyed(int index)
+        public static bool GetWeaponBuyed(int index)
         {
             bool value;
-            value = PlayerPrefs.GetInt(StaticText.Weapon + index) != 0;
+            value = PlayerPrefs.GetInt(ValueConstants.Weapon + index) != 0;
             return value;
         }
 
-        static public void SetBulletParticle(int value)
+        public static void SetBulletParticle(int value)
         {
-            PlayerPrefs.SetInt(StaticText.Bullet, value);
+            PlayerPrefs.SetInt(ValueConstants.Bullet, value);
         }
 
-        static public int GetBulletParticle()
+        public static int GetBulletParticle()
         {
-            return PlayerPrefs.GetInt(StaticText.Bullet);
+            return PlayerPrefs.GetInt(ValueConstants.Bullet);
         }
 
-        static public void SetBulletParticleBuyed(int index, bool isBuyed)
+        public static void SetBulletParticleBuyed(int index, bool isBuyed)
         {
-            PlayerPrefs.SetInt(StaticText.Bullet + index, isBuyed ? 1 : 0);
+            PlayerPrefs.SetInt(ValueConstants.Bullet + index, isBuyed ? 1 : 0);
         }
 
-        static public bool GetBulletParticleBuyed(int index)
+        public static bool GetBulletParticleBuyed(int index)
         {
             bool value;
-            value = PlayerPrefs.GetInt(StaticText.Bullet + index) != 0;
-            return value;
-        }
-    
-        static public void SetMusicIsOn(bool isOnMusic)
-        {
-            PlayerPrefs.SetInt(StaticText.MusicVolume, isOnMusic ? 0 : 1);
-        }
-
-        static public bool GetMusicIsOn()
-        {
-            bool value;
-            value = PlayerPrefs.GetInt(StaticText.MusicVolume) == 0;
-            return value;
-        } 
-    
-        static public void SetSoundIsOn(bool isOnSound)
-        {
-            PlayerPrefs.SetInt(StaticText.SoundVolume, isOnSound ? 0 : 1);
-        }
-
-        static public bool GetSoundIsOn()
-        {
-            bool value;
-            value = PlayerPrefs.GetInt(StaticText.SoundVolume) == 0;
+            value = PlayerPrefs.GetInt(ValueConstants.Bullet + index) != 0;
             return value;
         }
 
-        static public void SetDayUsedGift(int day)
+        public static void SetMusicIsOn(bool isOnMusic)
         {
-            PlayerPrefs.SetInt(StaticText.Day, day);
+            PlayerPrefs.SetInt(ValueConstants.MusicVolume, isOnMusic ? 0 : 1);
         }
 
-        static public int GetDayUsedGift()
+        public static bool GetMusicIsOn()
         {
-            return PlayerPrefs.GetInt(StaticText.Day);
-        } 
-    
-        static public void SetLeftToGetGift(int leftToGet)
-        {
-            PlayerPrefs.SetInt(StaticText.LeftToGet, leftToGet);
+            bool value;
+            value = PlayerPrefs.GetInt(ValueConstants.MusicVolume) == 0;
+            return value;
         }
 
-        static public int GetLeftToGetGift()
+        public static void SetSoundIsOn(bool isOnSound)
         {
-            return PlayerPrefs.GetInt(StaticText.LeftToGet);
+            PlayerPrefs.SetInt(ValueConstants.SoundVolume, isOnSound ? 0 : 1);
+        }
+
+        public static bool GetSoundIsOn()
+        {
+            bool value;
+            value = PlayerPrefs.GetInt(ValueConstants.SoundVolume) == 0;
+            return value;
+        }
+
+        public static void SetDayUsedGift(int day)
+        {
+            PlayerPrefs.SetInt(ValueConstants.Day, day);
+        }
+
+        public static int GetDayUsedGift()
+        {
+            return PlayerPrefs.GetInt(ValueConstants.Day);
+        }
+
+        public static void SetLeftToGetGift(int leftToGet)
+        {
+            PlayerPrefs.SetInt(ValueConstants.LeftToGet, leftToGet);
+        }
+
+        public static int GetLeftToGetGift()
+        {
+            return PlayerPrefs.GetInt(ValueConstants.LeftToGet);
         }
     }
 }

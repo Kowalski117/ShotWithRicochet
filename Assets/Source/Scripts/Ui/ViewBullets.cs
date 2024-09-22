@@ -10,7 +10,7 @@ namespace Source.Scripts.Ui
         [SerializeField] private GameObject _bullet;
         [SerializeField] private Sprite _spriteGray;
         [SerializeField] private int _heightGainValue = 45;
-    
+
         private int _numberColorChanges = 0;
         private RectTransform _rectTransform;
 
@@ -40,7 +40,7 @@ namespace Source.Scripts.Ui
         {
             for (int i = 0; i < countBullets; i++)
             {
-                _rectTransform.sizeDelta = new Vector2(_rectTransform.rect.width,_rectTransform.rect.height+_heightGainValue);
+                _rectTransform.sizeDelta = new Vector2(_rectTransform.rect.width, _rectTransform.rect.height + _heightGainValue);
                 Instantiate(_bullet, transform);
             }
         }
@@ -49,7 +49,6 @@ namespace Source.Scripts.Ui
         {
             Instantiate(_bullet, transform);
         }
-    
 
         public void ChangeImage()
         {

@@ -9,20 +9,10 @@ namespace Source.Scripts
     public class Name : MonoBehaviour
     {
         [SerializeField] private TMP_Text _text;
-    
+
         private void Start()
         {
             StartCoroutine(CheckWorkSDK());
-        }
-
-        IEnumerator CheckWorkSDK()
-        {
-#if !UNITY_WEBGL || UNITY_EDITOR
-            yield break;
-#endif
-            if (!YandexGamesSdk.IsInitialized)
-                yield return YandexGamesSdk.Initialize();
-            ViewName();
         }
 
         private void ViewName()
@@ -31,10 +21,20 @@ namespace Source.Scripts
             {
                 string name = result.publicName;
                 if (string.IsNullOrEmpty(name))
-                    name = StaticText.Anonymous;
+                    name = ValueConstants.Anonymous;
                 _text.text = name;
                 _text.GetComponent<LeanLocalizedTextMeshProUGUI>().enabled = false;
             });
+        }
+
+        private IEnumerator CheckWorkSDK()
+        {
+#if !UNITY_WEBGL || UNITY_EDITOR
+            yield break;
+#endif
+            if (!YandexGamesSdk.IsInitialized)
+                yield return YandexGamesSdk.Initialize();
+            ViewName();
         }
     }
 }

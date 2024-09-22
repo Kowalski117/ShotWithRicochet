@@ -11,7 +11,7 @@ namespace Source.Scripts
         [SerializeField] private int _damage;
         [SerializeField] private int _speed;
         [SerializeField] private ParticleSystem _hittingWall;
-        [SerializeField] private BuletParticleList _list;
+        [SerializeField] private ObjectList _list;
 
         private Rigidbody _rigidbody;
         private GameObject _particleTemplate;
@@ -27,7 +27,7 @@ namespace Source.Scripts
         {
             _rigidbody.velocity = transform.forward * _speed;
         }
-    
+
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.GetComponent<Wall>())

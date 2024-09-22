@@ -7,12 +7,12 @@ namespace Source.Scripts.Ui
 {
     public class LeaderBoard : MonoBehaviour
     {
+        private static string LeaderboardName = "Stars";
+
         [SerializeField] private GameObject _templatePlayer;
         [SerializeField] private Transform _groupLeaderBoard;
-        
-        private static string LeaderboardName = "Stars";
-        
-        private List<GameObject> _list =new List<GameObject>();
+
+        private List<GameObject> _list = new List<GameObject>();
         private GameObject _currentPlayer;
         private int _topPlayersCount = 5;
         private int _competingPlayers = 1;
@@ -44,16 +44,16 @@ namespace Source.Scripts.Ui
                     string score = result.entries[i].score.ToString();
 
                     if (string.IsNullOrEmpty(name))
-                        name = StaticText.Anonymous;
+                        name = ValueConstants.Anonymous;
 
-                    _currentPlayer = Instantiate(_templatePlayer,_groupLeaderBoard.transform);
+                    _currentPlayer = Instantiate(_templatePlayer, _groupLeaderBoard.transform);
                     _currentPlayer.GetComponent<LeaderBoardPlayer>().SetView(rank, name, score);
                     _list.Add(_currentPlayer);
                 }
             }, null, _topPlayersCount, _competingPlayers);
         }
-    
-        IEnumerator CheckWorkSdkAndShowLeaderboard()
+
+        private IEnumerator CheckWorkSdkAndShowLeaderboard()
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             yield break;

@@ -13,7 +13,7 @@ namespace Source.Scripts
 
         private Vector3 _pointSpawnCrashAndCoins = new Vector3(0, 1, 0);
         private int _maxHealth = 1;
-        
+
         public event UnityAction ItemDied;
         public event UnityAction BulletHitting;
 

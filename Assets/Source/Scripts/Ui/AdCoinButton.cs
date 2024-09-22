@@ -12,7 +12,7 @@ namespace Source.Scripts.Ui
         [SerializeField] private Level _level;
         [SerializeField] private TMP_Text _coinText;
         [SerializeField] private MixerSetting _mixer;
-        
+
         private Button _button;
         private int _coinLevel;
 
@@ -25,6 +25,7 @@ namespace Source.Scripts.Ui
         {
             _button.onClick.AddListener(ShowAd);
         }
+
         private void OnDisable()
         {
             _button.onClick.RemoveListener(ShowAd);
@@ -40,7 +41,7 @@ namespace Source.Scripts.Ui
             _coinText.text = _coinLevel.ToString();
             _button.interactable = false;
         }
-    
+
         private void ShowAd()
         {
             VideoAd.Show(() => _mixer.Mute(), AddCoin, () => _mixer.Load(), null);

@@ -20,7 +20,7 @@ namespace Source.Scripts
         private int _leftToGet;
         private int _saveDay;
         private int _currentDay;
-    
+
         private void OnEnable()
         {
             _saveDay = Save.GetDayUsedGift();
@@ -44,10 +44,12 @@ namespace Source.Scripts
         }
 
         private void View()
-        {        
+        {
             if (_leftToGet == 0)
+            {
                 _button.gameObject.SetActive(false);
-            
+            }
+
             _textAttempts.text = $"{_leftToGet}/{_maxAmountUse}";
             _textButtonCoins.text = $"+{_coin}";
         }
@@ -55,12 +57,12 @@ namespace Source.Scripts
         private void AddCoin()
         {
             _leftToGet--;
-            Save.SetCoins(Save.GetCoins()+_coin);
+            Save.SetCoins(Save.GetCoins() + _coin);
             Save.SetLeftToGetGift(_leftToGet);
             _textCoins.text = Save.GetCoins().ToString();
             gameObject.SetActive(false);
         }
-    
+
         private void ShowAd()
         {
             VideoAd.Show(() => _mixer.Mute(), AddCoin, () => _mixer.Load(), null);

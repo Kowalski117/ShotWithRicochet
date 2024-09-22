@@ -8,7 +8,7 @@ namespace Source.Scripts.Shop
 {
     public abstract class ShopObject : MonoBehaviour
     {
-        [SerializeField] private ScriptableTest _listSO;
+        [SerializeField] private ObjectList _listSO;
         [SerializeField] private Button _left;
         [SerializeField] private Button _right;
         [SerializeField] private Button _select;
@@ -110,7 +110,7 @@ namespace Source.Scripts.Shop
         private void SetActiveButton()
         {
             GetSaveValueBye();
-            
+
             if (_listSO.List.Count - 1 > 0)
             {
                 if (Value <= 0)
@@ -149,7 +149,7 @@ namespace Source.Scripts.Shop
                 SetPrice();
                 _buy.gameObject.SetActive(true);
 
-                if(Price<=Save.GetCoins())
+                if (Price <= Save.GetCoins())
                 {
                     _buy.interactable = true;
                 }

@@ -11,7 +11,7 @@ namespace Source.Scripts.Ui
         [SerializeField] private TMP_Text _valueEnemy;
         [SerializeField] private TMP_Text _valueItem;
         [SerializeField] private TMP_Text _valueRicochet;
-    
+
         private void Start()
         {
             _coinsLevel.text = _level.Coins.ToString();
@@ -31,7 +31,7 @@ namespace Source.Scripts.Ui
 
         private void ChangeStats()
         {
-            _coinsLevel.text =_level.Coins.ToString();
+            _coinsLevel.text = _level.Coins.ToString();
             _valueEnemy.text = _level.AllEnemy.ToString();
             _valueItem.text = _level.AllItem.ToString();
         }

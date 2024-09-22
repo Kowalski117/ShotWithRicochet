@@ -34,7 +34,6 @@ namespace Source.Scripts.Ui
             _bulletButton.onClick.RemoveListener(OnClickBulletButton);
         }
 
-
         private void OnClickCharacterButton()
         {
             _character.SetActive(true);
@@ -44,7 +43,6 @@ namespace Source.Scripts.Ui
             _characterButton.GetComponent<Image>().sprite = _onClickButtonCharacter;
             _weaponButton.GetComponent<Image>().sprite = _buttonWeapon;
             _bulletButton.GetComponent<Image>().sprite = _buttonBullet;
-
         }
 
         private void OnClickWeaponButton()
@@ -63,7 +61,6 @@ namespace Source.Scripts.Ui
             _character.SetActive(false);
             _weapon.SetActive(false);
             _bullet.SetActive(true);
-
             _characterButton.GetComponent<Image>().sprite = _buttonCharacter;
             _weaponButton.GetComponent<Image>().sprite = _buttonWeapon;
             _bulletButton.GetComponent<Image>().sprite = _onClickButtonBullet;

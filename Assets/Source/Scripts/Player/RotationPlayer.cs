@@ -4,26 +4,16 @@ using UnityEngine;
 namespace Source.Scripts.Player
 {
     [RequireComponent(typeof(Rigidbody), typeof(Animator))]
-    public class MovePlayer : MonoBehaviour
+    public class RotationPlayer : MonoBehaviour
     {
-        [SerializeField] private Transform _pistolPoint;
-        [SerializeField] private WeaponsList _weapons;
-        [SerializeField] private int _price;
+
 
         private FixedJoystick _joystick;
         private Rigidbody _rigidbody;
         private float _speedRun = 0.0001f;
-        private GameObject _weapon;
 
-        public int Price => _price;
 
-        private void Awake()
-        {
-            _weapon = Instantiate(_weapons.TakeOneObject(Save.GetWeapon()), _pistolPoint.transform.position,
-                _pistolPoint.transform.rotation);
-            _weapon.transform.SetParent(transform);
-        }
-
+       
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
@@ -31,8 +21,7 @@ namespace Source.Scripts.Player
 
         private void Update()
         {
-            _rigidbody.velocity = new Vector3(_joystick.Horizontal * _speedRun, _rigidbody.velocity.y,
-                _joystick.Vertical * _speedRun);
+            _rigidbody.velocity = new Vector3(_joystick.Horizontal * _speedRun, _rigidbody.velocity.y, _joystick.Vertical * _speedRun);
 
             if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
             {

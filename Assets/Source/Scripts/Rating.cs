@@ -27,18 +27,7 @@ namespace Source.Scripts
         {
             StartCoroutine(CheckWorkSDK());
         }
-    
-        IEnumerator CheckWorkSDK()
-        {
-#if !UNITY_WEBGL || UNITY_EDITOR
-            yield break;
-#endif
-            if (!YandexGamesSdk.IsInitialized)
-                yield return YandexGamesSdk.Initialize();
-            _isAutorized = PlayerAccount.IsAuthorized;
-            OpenPanel();
-        }
-    
+
         private void OpenPanel()
         {
             if (_isAutorized)
@@ -49,6 +38,17 @@ namespace Source.Scripts
             {
                 _authorization.SetActive(true);
             }
+        }
+
+        private IEnumerator CheckWorkSDK()
+        {
+#if !UNITY_WEBGL || UNITY_EDITOR
+            yield break;
+#endif
+            if (!YandexGamesSdk.IsInitialized)
+                yield return YandexGamesSdk.Initialize();
+            _isAutorized = PlayerAccount.IsAuthorized;
+            OpenPanel();
         }
     }
 }

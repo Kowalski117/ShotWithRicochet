@@ -19,20 +19,19 @@ namespace Source.Scripts.Ui
         public void SetLevel(int indexLevel)
         {
             _indexLevel = indexLevel;
-        
 
             if (Save.IsLevelPassed(_indexLevel - 1) == true || _indexLevel == 1)
             {
                 _spriteLock.SetActive(false);
                 _text.text = _indexLevel.ToString();
-                _button.interactable= true;
+                _button.interactable = true;
                 StarChangeSprite();
             }
             else
             {
                 _spriteLock.SetActive(true);
                 _text.text = null;
-                _button.interactable= false;
+                _button.interactable = false;
             }
         }
 

@@ -28,7 +28,7 @@ namespace Source.Scripts
 
         private void Update()
         {
-            _shootPoint = _player.GetComponentInChildren<MovePlayer>().GetComponentInChildren<Weapon>()
+            _shootPoint = _player.GetComponentInChildren<RotationPlayer>().GetComponentInChildren<Weapon>()
                 .GetComponentInChildren<ShotPoint>().transform;
 
             _ray = new Ray(_shootPoint.position, _shootPoint.forward);
@@ -56,16 +56,14 @@ namespace Source.Scripts
                     {
                         _target.gameObject.SetActive(true);
                         _target.transform.position = _hit.collider.gameObject.GetComponent<Item>().transform.position;
-                        _target.transform.position = new Vector3(_target.transform.position.x, _positionY,
-                            _target.transform.position.z);
+                        _target.transform.position = new Vector3(_target.transform.position.x, _positionY, _target.transform.position.z);
                         break;
                     }
                 }
                 else
                 {
                     _lineRenderer.positionCount++;
-                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1,
-                        _ray.origin + _ray.direction * remainingLength);
+                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, _ray.origin + _ray.direction * remainingLength);
                 }
 
                 if (i == _reflections - 1)
