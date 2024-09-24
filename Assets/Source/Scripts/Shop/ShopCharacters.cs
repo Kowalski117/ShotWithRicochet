@@ -14,7 +14,7 @@ namespace Source.Scripts.Shop
         {
             Save.SetCharacter(Value);
         }
-        
+
         public override void GetSaveValueBye()
         {
             IsBuyed = Save.GetCharacterBuyed(Value);

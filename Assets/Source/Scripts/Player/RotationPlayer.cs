@@ -1,4 +1,3 @@
-using Source.Scripts.SO;
 using UnityEngine;
 
 namespace Source.Scripts.Player
@@ -7,13 +6,10 @@ namespace Source.Scripts.Player
     public class RotationPlayer : MonoBehaviour
     {
 
-
         private FixedJoystick _joystick;
         private Rigidbody _rigidbody;
         private float _speedRun = 0.0001f;
 
-
-       
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();

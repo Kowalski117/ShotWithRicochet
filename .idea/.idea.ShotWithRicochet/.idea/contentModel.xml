@@ -683,43 +683,49 @@
           </e>
           <e p="Scenes" t="Include" />
           <e p="Scripts" t="Include">
-            <e p="AddCoins.cs" t="Include" />
-            <e p="BackgrounSound.cs" t="Include" />
-            <e p="Bullet.cs" t="Include" />
-            <e p="BulletParticle.cs" t="Include" />
-            <e p="CameraPosition.cs" t="Include" />
-            <e p="Empty" t="Include">
-              <e p="ShotPoint.cs" t="Include" />
+            <e p="Bullets" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="BulletParticle.cs" t="Include" />
             </e>
-            <e p="Enemy.cs" t="Include" />
-            <e p="GameActive.cs" t="Include" />
-            <e p="Item.cs" t="Include" />
-            <e p="Level.cs" t="Include" />
-            <e p="Name.cs" t="Include" />
+            <e p="Camera" t="Include">
+              <e p="CameraPosition.cs" t="Include" />
+            </e>
+            <e p="Enemy" t="Include">
+              <e p="Enemy.cs" t="Include" />
+            </e>
+            <e p="Environment" t="Include">
+              <e p="Item.cs" t="Include" />
+              <e p="RaycastReflection.cs" t="Include" />
+              <e p="Wall.cs" t="Include" />
+            </e>
+            <e p="Item" t="Include" />
+            <e p="Level" t="Include">
+              <e p="Level.cs" t="Include" />
+              <e p="ShowInterstitialAd.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="Player.cs" t="Include" />
               <e p="RotationPlayer.cs" t="Include" />
               <e p="SkinPlayer.cs" t="Include" />
             </e>
-            <e p="Rating.cs" t="Include" />
-            <e p="RaycastReflection.cs" t="Include" />
-            <e p="Save.cs" t="Include" />
+            <e p="Save" t="Include">
+              <e p="Save.cs" t="Include" />
+            </e>
             <e p="Shop" t="Include">
               <e p="ShopBullet.cs" t="Include" />
               <e p="ShopCharacters.cs" t="Include" />
               <e p="ShopObject.cs" t="Include" />
               <e p="ShopWeapon.cs" t="Include" />
             </e>
-            <e p="ShowInterstitialAd.cs" t="Include" />
             <e p="SO" t="Include">
-              <e p="BuletParticleList.cs" t="Include" />
-              <e p="CharactersList.cs" t="Include" />
               <e p="ObjectList.cs" t="Include" />
-              <e p="WeaponsList.cs" t="Include" />
             </e>
-            <e p="SoundButtonClick.cs" t="Include" />
+            <e p="Sound" t="Include">
+              <e p="BackgrounSound.cs" t="Include" />
+            </e>
             <e p="Ui" t="Include">
               <e p="AdCoinButton.cs" t="Include" />
+              <e p="AddCoins.cs" t="Include" />
               <e p="AutorizatoinButton.cs" t="Include" />
               <e p="ButtonClose.cs" t="Include" />
               <e p="ButtonLanguages.cs" t="Include" />
@@ -730,6 +736,7 @@
                 <e p="ImageBullet.cs" t="Include" />
                 <e p="ScaleButton.cs" t="Include" />
               </e>
+              <e p="GameActive.cs" t="Include" />
               <e p="Language.cs" t="Include" />
               <e p="LeaderBoard.cs" t="Include" />
               <e p="LeaderBoardPlayer.cs" t="Include" />
@@ -737,16 +744,19 @@
               <e p="LevelNumberText.cs" t="Include" />
               <e p="MixerSetting.cs" t="Include" />
               <e p="ModeMenu.cs" t="Include" />
+              <e p="Name.cs" t="Include" />
               <e p="NewGame.cs" t="Include" />
               <e p="PanelLevel.cs" t="Include" />
               <e p="PanelWin.cs" t="Include" />
+              <e p="Rating.cs" t="Include" />
+              <e p="SoundButtonClick.cs" t="Include" />
               <e p="ViewBullets.cs" t="Include" />
               <e p="ViewStatsLevel.cs" t="Include" />
             </e>
             <e p="ValueConstants.cs" t="Include" />
-            <e p="Wall.cs" t="Include" />
             <e p="Weapons" t="Include">
               <e p="Pistol.cs" t="Include" />
+              <e p="ShotPoint.cs" t="Include" />
               <e p="Weapon.cs" t="Include" />
             </e>
           </e>
